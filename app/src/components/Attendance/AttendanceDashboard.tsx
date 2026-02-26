@@ -87,9 +87,9 @@ export const AttendanceDashboard: React.FC<AttendanceDashboardProps> = ({ onBack
                 const rostersData = rostersSnap.val();
                 Object.entries(rostersData).forEach(([courseName, studentsObj]: [string, any]) => {
                     courseSet.add(courseName);
-                    Object.entries(studentsObj).forEach(([pushId, studentVal]: [string, any]) => {
+                    Object.entries(studentsObj).forEach(([rollNoKey, studentVal]: [string, any]) => {
                         studentList.push({
-                            uid: pushId,  // Fake UID from database push key
+                            uid: `${courseName}_${rollNoKey}`,  // Create a unique UID for roster students
                             studentId: studentVal.rollNo,
                             name: studentVal.name,
                             course: courseName
@@ -251,52 +251,57 @@ export const AttendanceDashboard: React.FC<AttendanceDashboardProps> = ({ onBack
 
     const handleBulkUpload = async () => {
         setUploadError('');
-        if (!bulkCourseName.trim()) return setUploadError('Please specify a Course/Batch Name.');
+        const trimmedCourseName = bulkCourseName.trim();
+        if (!trimmedCourseName) return setUploadError('Please specify a Course/Batch Name.');
         if (!bulkInput.trim()) return setUploadError('Please paste student data.');
 
         setLoading(true);
         try {
-            // Parse lines
             const lines = bulkInput.split('\n').map(l => l.trim()).filter(l => l);
-            const rosterRef = ref(database, `attendance_rosters/${bulkCourseName}`);
-            
-            let addedCount = 0;
+            const studentsToUpload: { [key: string]: any } = {};
+
             for (const line of lines) {
-                // Split by Tab, Comma, or multi-space
                 const parts = line.split(/\t|,|\s{2,}/); 
                 
-                let roll = '';
+                let rollNo = '';
                 let name = '';
 
                 if (parts.length >= 2) {
-                    roll = parts[0].trim();
+                    rollNo = parts[0].trim();
                     name = parts.slice(1).join(' ').trim();
                 } else {
-                    // Fallback: try to split by first space (assuming Roll Name format)
                     const spaceIdx = line.indexOf(' ');
                     if (spaceIdx > -1) {
-                        roll = line.substring(0, spaceIdx).trim();
+                        rollNo = line.substring(0, spaceIdx).trim();
                         name = line.substring(spaceIdx + 1).trim();
                     } else {
-                        roll = line; // No name? Just use as roll
+                        rollNo = line;
                         name = 'Unknown';
                     }
                 }
 
-                if (roll) {
-                     await push(rosterRef, {
-                        rollNo: roll,
-                        name: name
-                     });
-                     addedCount++;
+                if (rollNo && name) {
+                    // Use a sanitized roll number as the key to prevent duplicates and allow updates
+                    const safeKey = rollNo.replace(/[.#$[\]]/g, '_').toUpperCase();
+                    studentsToUpload[safeKey] = {
+                        rollNo,
+                        name,
+                        updatedAt: serverTimestamp()
+                    };
                 }
             }
 
-            alert(`Successfully uploaded ${addedCount} students to ${bulkCourseName}!`);
+            // Save to Firebase under attendance_rosters/CourseName
+            const rosterRef = ref(database, `attendance_rosters/${trimmedCourseName.toUpperCase()}`);
+            
+            // Use update() to merge with existing list rather than set() which overwrites
+            await update(rosterRef, studentsToUpload); 
+            
             setBulkInput('');
+            alert('Roster updated successfully! Existing students were preserved and new ones were added.');
             setBulkCourseName('');
             setViewMode('mark');
-            setSelectedCourse(bulkCourseName);
+            setSelectedCourse(trimmedCourseName.toUpperCase());
             await fetchStudents(); // Refresh lists
         } catch (err: any) {
             setUploadError(err.message);

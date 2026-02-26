@@ -2,8 +2,9 @@
 .attendance-dashboard {
     background: #f8fafc;
     min-height: 100vh;
-    margin: -2rem; /* Negate container padding if needed, or adjust App layout */
     padding: 2rem;
+    margin: 0 auto;
+    max-width: 1600px;
 }
 
 .att-header {
@@ -139,8 +140,8 @@
 
 .mark-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
 }
 
 .mark-card {

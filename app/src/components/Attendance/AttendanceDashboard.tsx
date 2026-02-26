@@ -362,9 +362,9 @@ export const AttendanceDashboard: React.FC<AttendanceDashboardProps> = ({ onBack
                 {viewMode === 'mark' ? (
                     <>
                         <aside className="att-sidebar">
-                            <h3>Session Setup</h3>
+                            <h3 style={{marginBottom: '1.5rem', color: '#1e293b'}}>⚙️ Session Setup</h3>
                             <div className="form-group">
-                                <label>Course / Program</label>
+                                <label>🏫 Course / Program</label>
                                 <select 
                                     value={selectedCourse} 
                                     onChange={e => setSelectedCourse(e.target.value)}
@@ -376,7 +376,7 @@ export const AttendanceDashboard: React.FC<AttendanceDashboardProps> = ({ onBack
                             </div>
                             
                             <div className="form-group">
-                                <label>Date</label>
+                                <label>📅 Date</label>
                                 <input 
                                     type="date" 
                                     value={sessionDate} 
@@ -386,7 +386,7 @@ export const AttendanceDashboard: React.FC<AttendanceDashboardProps> = ({ onBack
                             </div>
 
                             <div className="form-group">
-                                <label>Period Timing</label>
+                                <label>⏱️ Period Timing</label>
                                 <select 
                                     value={sessionPeriod} 
                                     onChange={e => setSessionPeriod(e.target.value)} 
@@ -403,7 +403,7 @@ export const AttendanceDashboard: React.FC<AttendanceDashboardProps> = ({ onBack
                             </div>
 
                             <div className="form-group">
-                                <label>Subject</label>
+                                <label>📚 Subject</label>
                                 <input 
                                     type="text" 
                                     value={sessionSubject} 
@@ -414,7 +414,7 @@ export const AttendanceDashboard: React.FC<AttendanceDashboardProps> = ({ onBack
                             </div>
 
                             <div className="form-group">
-                                <label>Teacher Name</label>
+                                <label>👩‍🏫 Teacher Name</label>
                                 <input 
                                     type="text" 
                                     value={sessionTeacher} 
@@ -429,10 +429,9 @@ export const AttendanceDashboard: React.FC<AttendanceDashboardProps> = ({ onBack
                             </div>
                             
                             <button 
-                                className="btn-save-att" 
+                                className={`btn-save-att ${existingRecordId ? 'btn-update' : ''}`}
                                 onClick={handleSaveAttendance} 
                                 disabled={loading || filteredStudents.length === 0}
-                                style={{marginTop: '1.5rem', background: existingRecordId ? '#f59e0b' : '#4f46e5'}}
                             >
                                 {loading ? 'Saving...' : existingRecordId ? '✏️ Update Attendance' : '💾 Save Attendance'}
                             </button>

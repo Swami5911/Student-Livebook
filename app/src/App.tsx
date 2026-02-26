@@ -12,7 +12,7 @@ import { LoginModal } from './components/Auth/LoginModal';
 import { AdminPanel } from './components/Admin/AdminPanel';
 import { AttendanceDashboard } from './components/Attendance/AttendanceDashboard';
 import type { UserRole } from './types';
-import universityLogo from './assets/universitylogo.png';
+import defaultLogo from './assets/universitylogo.png';
 import { initGoogleClient, signIn, signOut, syncLectureToGoogleDoc } from './utils/googleDocs';
 import { lectureToRawText } from './utils/LectureParser';
 import { LandingPage } from './components/LandingPage/LandingPage';
@@ -389,7 +389,7 @@ function App() {
         <div className="container nav-content">
           <div className="brand" style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
             <img 
-                src={activeClass?.logo || universityLogo} 
+                src={activeClass?.logo || defaultLogo} 
                 alt="Logo" 
                 style={{height: '50px', maxHeight: '100%', cursor: 'pointer', objectFit: 'contain'}} 
                 className="nav-logo" 

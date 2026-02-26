@@ -24,7 +24,7 @@ export const COURSE_DATA: ClassLevel[] = [
         lectures: IOT_DATA
       }
     ],
-    institutionName: 'Shri Khushal Das University',
+    institutionName: 'Skill Kindle Discovery',
     type: 'university'
   },
   {

@@ -37,6 +37,9 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
     const [editingUid, setEditingUid] = useState<string | null>(null);
     const [editData, setEditData] = useState({ name: '', studentId: '', password: '' });
 
+    // Filter/Search State
+    const [studentSearchQuery, setStudentSearchQuery] = useState('');
+
     useEffect(() => {
         fetchUsers();
     }, []);
@@ -67,7 +70,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
             await set(ref(database, `users/${user.uid}`), {
                 email: newEmail,
                 role: 'teacher',
-                name: newName || 'Teacher'
+                name: newName || 'Teacher',
+                password: newPassword
             });
 
             alert('Teacher added successfully!');
@@ -276,68 +280,123 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                     </form>
                 </div>
 
-                {/* User List Section */}
-                <div className="admin-card user-list-card">
-                    <h3>👥 Current Users</h3>
-                    <ul className="user-list">
-                        {users.map(user => (
-                            <li key={user.uid} className={`user-item role-${user.role}`}>
-                                {editingUid === user.uid ? (
-                                    <div className="user-edit-form" style={{display: 'flex', flexDirection: 'column', gap: '8px', width: '100%'}}>
-                                         <input 
-                                            value={editData.name} 
-                                            onChange={e => setEditData({...editData, name: e.target.value})}
-                                            placeholder="Student Name"
-                                            className="nav-search"
-                                         />
-                                         <input 
-                                            value={editData.studentId} 
-                                            onChange={e => setEditData({...editData, studentId: e.target.value})}
-                                            placeholder="Student ID (e.g. 25BT0001)"
-                                            className="nav-search"
-                                         />
-                                         <input 
-                                            value={editData.password} 
-                                            onChange={e => setEditData({...editData, password: e.target.value})}
-                                            placeholder="Password"
-                                            className="nav-search"
-                                         />
-                                         <div style={{display: 'flex', gap: '10px'}}>
-                                            <button className="btn btn-primary" onClick={() => handleSaveEdit(user)}>Save</button>
-                                            <button className="btn btn-outline" onClick={() => setEditingUid(null)}>Cancel</button>
-                                         </div>
-                                    </div>
-                                ) : (
-                                    <>
-                                    <div className="user-info">
-                                        <span className="user-name">{user.name || 'Unknown'}</span>
-                                        <span className="user-email">{user.studentId || user.email}</span>
-                                        <span className="user-role-badge">{user.role.toUpperCase()}</span>
-                                    </div>
-                                    <div style={{display: 'flex', gap: '8px'}}>
-                                        {user.role === 'student' && (
-                                            <button 
-                                                onClick={() => openEditStudent(user)}
-                                                className="btn-outline"
-                                                style={{padding: '4px 8px', fontSize: '0.8rem', cursor: 'pointer'}}
-                                            >
-                                                Edit
-                                            </button>
-                                        )}
-                                        {user.role !== 'admin' && (
-                                            <button 
-                                                onClick={() => handleDeleteUser(user.uid)}
-                                                className="btn-delete-sm"
-                                            >
-                                                Remove Access
-                                            </button>
-                                        )}
-                                    </div>
-                                    </>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
+                {/* Teacher List Section */}
+                <div className="admin-card user-list-card" style={{ gridColumn: '1 / -1', overflowX: 'auto' }}>
+                    <h3>👨‍🏫 Teacher Directory</h3>
+                    <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '600px' }}>
+                        <thead>
+                            <tr style={{ borderBottom: '2px solid #e2e8f0', color: '#475569' }}>
+                                <th style={{ padding: '12px 8px' }}>Name</th>
+                                <th style={{ padding: '12px 8px' }}>Email</th>
+                                <th style={{ padding: '12px 8px' }}>Password</th>
+                                <th style={{ padding: '12px 8px' }}>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {users.filter(u => u.role === 'teacher').map(user => (
+                                <tr key={user.uid} style={{ borderBottom: '1px solid #f1f5f9' }}>
+                                    {editingUid === user.uid ? (
+                                        <td colSpan={4} style={{ padding: '12px 8px' }}>
+                                            <div style={{display: 'flex', gap: '8px', alignItems: 'center'}}>
+                                                <input value={editData.name} onChange={e => setEditData({...editData, name: e.target.value})} placeholder="Name" style={{padding: '6px', borderRadius: '4px', border: '1px solid #ccc'}} />
+                                                <input value={editData.password} onChange={e => setEditData({...editData, password: e.target.value})} placeholder="Password" style={{padding: '6px', borderRadius: '4px', border: '1px solid #ccc'}} />
+                                                <button className="btn btn-primary" style={{padding: '6px 12px'}} onClick={() => handleSaveEdit(user)}>Save</button>
+                                                <button className="btn btn-outline" style={{padding: '6px 12px'}} onClick={() => setEditingUid(null)}>Cancel</button>
+                                            </div>
+                                        </td>
+                                    ) : (
+                                        <>
+                                            <td style={{ padding: '12px 8px', fontWeight: 600, color: '#334155' }}>{user.name || 'Unknown'}</td>
+                                            <td style={{ padding: '12px 8px', color: '#64748b' }}>{user.email}</td>
+                                            <td style={{ padding: '12px 8px', color: '#64748b', fontFamily: 'monospace' }}>{user.password || '••••••••'}</td>
+                                            <td style={{ padding: '12px 8px' }}>
+                                                <div style={{ display: 'flex', gap: '8px' }}>
+                                                    <button onClick={() => openEditStudent(user)} className="btn-outline" style={{padding: '4px 8px', fontSize: '0.8rem', cursor: 'pointer'}}>Edit</button>
+                                                    <button onClick={() => handleDeleteUser(user.uid)} className="btn-delete-sm">Block / Restrict</button>
+                                                </div>
+                                            </td>
+                                        </>
+                                    )}
+                                </tr>
+                            ))}
+                            {users.filter(u => u.role === 'teacher').length === 0 && (
+                                <tr><td colSpan={4} style={{ padding: '12px', textAlign: 'center', color: '#94a3b8' }}>No teachers found.</td></tr>
+                            )}
+                        </tbody>
+                    </table>
+                </div>
+
+                {/* Student List Section */}
+                <div className="admin-card user-list-card" style={{ gridColumn: '1 / -1', overflowX: 'auto' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', borderBottom: '2px solid #f1f5f9', paddingBottom: '0.5rem' }}>
+                        <h3 style={{ margin: 0, borderBottom: 'none', paddingBottom: 0 }}>🎓 Student Directory</h3>
+                        <input 
+                            type="text" 
+                            placeholder="Filter by Name, ID, Batch (25) or Course (BT)..." 
+                            value={studentSearchQuery}
+                            onChange={(e) => setStudentSearchQuery(e.target.value)}
+                            style={{
+                                padding: '8px 12px',
+                                borderRadius: '6px',
+                                border: '1px solid #cbd5e1',
+                                width: '300px',
+                                fontSize: '0.9rem'
+                            }}
+                        />
+                    </div>
+                    
+                    <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '600px' }}>
+                        <thead>
+                            <tr style={{ borderBottom: '2px solid #e2e8f0', color: '#475569' }}>
+                                <th style={{ padding: '12px 8px' }}>Name</th>
+                                <th style={{ padding: '12px 8px' }}>Student ID</th>
+                                <th style={{ padding: '12px 8px' }}>Password</th>
+                                <th style={{ padding: '12px 8px' }}>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {users.filter(u => u.role === 'student' && (
+                                !studentSearchQuery || 
+                                u.name?.toLowerCase().includes(studentSearchQuery.toLowerCase()) || 
+                                u.studentId?.toLowerCase().includes(studentSearchQuery.toLowerCase()) ||
+                                u.email.toLowerCase().includes(studentSearchQuery.toLowerCase())
+                            )).map(user => (
+                                <tr key={user.uid} style={{ borderBottom: '1px solid #f1f5f9' }}>
+                                    {editingUid === user.uid ? (
+                                        <td colSpan={4} style={{ padding: '12px 8px' }}>
+                                            <div style={{display: 'flex', gap: '8px', alignItems: 'center'}}>
+                                                <input value={editData.name} onChange={e => setEditData({...editData, name: e.target.value})} placeholder="Name" style={{padding: '6px', borderRadius: '4px', border: '1px solid #ccc'}} />
+                                                <input value={editData.studentId} onChange={e => setEditData({...editData, studentId: e.target.value})} placeholder="Student ID" style={{padding: '6px', borderRadius: '4px', border: '1px solid #ccc'}} />
+                                                <input value={editData.password} onChange={e => setEditData({...editData, password: e.target.value})} placeholder="Password" style={{padding: '6px', borderRadius: '4px', border: '1px solid #ccc'}} />
+                                                <button className="btn btn-primary" style={{padding: '6px 12px'}} onClick={() => handleSaveEdit(user)}>Save</button>
+                                                <button className="btn btn-outline" style={{padding: '6px 12px'}} onClick={() => setEditingUid(null)}>Cancel</button>
+                                            </div>
+                                        </td>
+                                    ) : (
+                                        <>
+                                            <td style={{ padding: '12px 8px', fontWeight: 600, color: '#334155' }}>{user.name || 'Unknown'}</td>
+                                            <td style={{ padding: '12px 8px', color: '#64748b' }}>{user.studentId || user.email}</td>
+                                            <td style={{ padding: '12px 8px', color: '#64748b', fontFamily: 'monospace' }}>{user.password || '••••••••'}</td>
+                                            <td style={{ padding: '12px 8px' }}>
+                                                <div style={{ display: 'flex', gap: '8px' }}>
+                                                    <button onClick={() => openEditStudent(user)} className="btn-outline" style={{padding: '4px 8px', fontSize: '0.8rem', cursor: 'pointer'}}>Edit</button>
+                                                    <button onClick={() => handleDeleteUser(user.uid)} className="btn-delete-sm">Block / Restrict</button>
+                                                </div>
+                                            </td>
+                                        </>
+                                    )}
+                                </tr>
+                            ))}
+                            {users.filter(u => u.role === 'student' && (
+                                !studentSearchQuery || 
+                                u.name?.toLowerCase().includes(studentSearchQuery.toLowerCase()) || 
+                                u.studentId?.toLowerCase().includes(studentSearchQuery.toLowerCase()) ||
+                                u.email.toLowerCase().includes(studentSearchQuery.toLowerCase())
+                            )).length === 0 && (
+                                <tr><td colSpan={4} style={{ padding: '12px', textAlign: 'center', color: '#94a3b8' }}>No students found matching your criteria.</td></tr>
+                            )}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

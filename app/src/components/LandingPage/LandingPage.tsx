@@ -1,6 +1,6 @@
 import React from 'react';
 import './LandingPage.css';
-import landingLogo from '../../assets/landing_logo.png';
+import landingLogo from '../../assets/landinglogo1.png';
 
 interface LandingPageProps {
   onEnter: () => void;
@@ -13,12 +13,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
       <header className="lp-header">
         <div className="lp-container lp-nav">
           <div className="lp-brand">
-            <img src={landingLogo} alt="Shri Khushal Das University" className="lp-logo" style={{height: '80px', width: 'auto'}} />
+            <img src={landingLogo} alt="Skill Kindle Discovery" className="lp-logo" style={{height: '80px', width: 'auto'}} />
           </div>
           <div className="lp-nav-actions">
-            <a href="https://www.skduniversity.com/" target="_blank" rel="noopener noreferrer" className="lp-btn-outline">
-                Visit University Website
-            </a>
             <button className="lp-btn-nav" onClick={onEnter}>
                 Enter Livebook
             </button>
@@ -29,58 +26,71 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
       {/* Hero Section */}
       <section className="lp-hero">
         <div className="lp-container lp-hero-content">
-          <h1>Shri Khushal Das University</h1>
-          <p>Excellence in Education, Innovation in Learning</p>
-          <button className="lp-btn-hero" onClick={onEnter}>
-            Go to Livebook
-          </button>
+          <div className="lp-hero-emblem">
+            <span className="emblem-icon">🧠</span>
+            <span className="emblem-icon">🔑</span>
+            <span className="emblem-icon">📖</span>
+          </div>
+          <div className="lp-hero-text">
+            <h1 className="hero-title-skd">SKD</h1>
+            <h2 className="hero-subtitle">Skill Kindle Discovery</h2>
+            <p className="hero-tagline">UNLOCK YOUR POTENTIAL</p>
+            <button className="lp-btn-hero" onClick={onEnter}>
+              Go to Livebook
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* About Livebook Section */}
+      {/* Platform Features Section */}
       <section className="lp-section">
         <div className="lp-container">
           <div className="lp-section-title">
-            <h2>About Livebook</h2>
-            <p>The Digital Learning Ecosystem of SKDU</p>
+            <h2>Powered by SKD Livebook</h2>
+            <p>A comprehensive digital ecosystem built for modern educators and students.</p>
           </div>
           <div className="lp-grid">
             <div className="lp-card">
-              <span className="lp-card-icon">🎓</span>
-              <h3>Digital Campus</h3>
-              <p>Livebook brings the university experience to your device. Access lectures, streams, and resources anytime, anywhere, ensuring your education never stops.</p>
+              <span className="lp-card-icon">📊</span>
+              <h3>Admin & Teacher Dashboards</h3>
+              <p>Dedicated tools for educators to manage classes, upload interactive lecture content, track student progress, and seamlessly handle stream structures.</p>
             </div>
             <div className="lp-card">
-              <span className="lp-card-icon">🚀</span>
-              <h3>Advanced Learning</h3>
-              <p>Powered by modern technology, Livebook offers a seamless interface for managing courses, tracking attendance, and engaging with content effectively.</p>
+              <span className="lp-card-icon">✅</span>
+              <h3>Smart Attendance Tracking</h3>
+              <p>Fast and robust attendance management. Mark students present, absent, or late, perform bulk uploads via CSV, and export historical attendance records.</p>
+            </div>
+            <div className="lp-card">
+              <span className="lp-card-icon">�</span>
+              <h3>Interactive Lectures</h3>
+              <p>Experience content through rich multimedia blocks. Engage with embedded videos, runnable code snippets, Markdown notes, and responsive visual materials.</p>
             </div>
           </div>
         </div>
       </section>
 
-       {/* What You Can Learn Section */}
+       {/* Integration Section */}
        <section className="lp-section lp-bg-light">
         <div className="lp-container">
           <div className="lp-section-title">
-            <h2>What You Can Learn</h2>
-            <p>Unlock your potential with our comprehensive digital resources</p>
+            <h2>Seamless Integrations</h2>
+            <p>Connect your existing workflow directly within the Livebook platform</p>
           </div>
           <div className="lp-grid">
             <div className="lp-card">
-              <span className="lp-card-icon">📚</span>
-              <h3>Course Mastery</h3>
-              <p>Dive deep into subject-specific streams. From Engineering to Arts, find structured content tailored to your curriculum.</p>
+              <span className="lp-card-icon">�</span>
+              <h3>Google Docs & Sheets Sync</h3>
+              <p>Link your Livebook account directly to Google Workspace to fetch, embed, and sync Google Docs right into your lecture streams for collaborative editing.</p>
             </div>
             <div className="lp-card">
-              <span className="lp-card-icon">🎥</span>
-              <h3>Interactive Lectures</h3>
-              <p>Engage with dynamic lecture content. View video blocks, code snippets, and textual explanations all in one place.</p>
+              <span className="lp-card-icon">📱</span>
+              <h3>App-Like Experience (PWA)</h3>
+              <p>Install SKD Livebook on your desktop or mobile device. Navigate seamlessly with intuitive touch gestures and swipe navigation on supported devices.</p>
             </div>
             <div className="lp-card">
-              <span className="lp-card-icon">📝</span>
-              <h3>Self Assessment</h3>
-              <p>Test your knowledge with integrated quizzes and track your progress through immediate feedback and results.</p>
+              <span className="lp-card-icon">☁️</span>
+              <h3>Cloud-First Infrastructure</h3>
+              <p>Powered securely by Firebase. All your lecture data, student information, and attendance records are synced globally in real-time without latency.</p>
             </div>
           </div>
         </div>
@@ -89,8 +99,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
       {/* Footer */}
       <footer className="lp-footer">
         <div className="lp-container">
-          <p>&copy; {new Date().getFullYear()} Shri Khushal Das University, Hanumangarh. All rights reserved.</p>
-          <p>Powered by Livebook</p>
+          <p>&copy; {new Date().getFullYear()} Skill Kindle Discovery. All rights reserved.</p>
         </div>
       </footer>
     </div>

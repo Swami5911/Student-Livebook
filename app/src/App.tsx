@@ -12,7 +12,7 @@ import { LoginModal } from './components/Auth/LoginModal';
 import { AdminPanel } from './components/Admin/AdminPanel';
 import { AttendanceDashboard } from './components/Attendance/AttendanceDashboard';
 import type { UserRole } from './types';
-import universityLogo from './assets/university_logo.png';
+import universityLogo from './assets/universitylogo.png';
 import { initGoogleClient, signIn, signOut, syncLectureToGoogleDoc } from './utils/googleDocs';
 import { lectureToRawText } from './utils/LectureParser';
 import { LandingPage } from './components/LandingPage/LandingPage';
@@ -45,7 +45,7 @@ function App() {
                     ...cls,
                     institutionName: cls.institutionName || defaultCls?.institutionName || "My Institution",
                     type: cls.type || defaultCls?.type || 'university',
-                    logo: cls.logo || defaultCls?.logo || '/src/assets/university_logo.png'
+                    logo: cls.logo || defaultCls?.logo || '/src/assets/universitylogo.png'
                 };
             });
             set(dataRef, sanitizeForFirebase(updatedData)); // Auto-fix DB
@@ -301,7 +301,7 @@ function App() {
         const institutionName = prompt("Edit Institution Name", cls.institutionName || "");
         const typeInput = prompt("Edit Type: 'school' or 'university'", cls.type || "university");
         const type: 'school' | 'university' | 'other' = (typeInput === 'school' || typeInput === 'university') ? typeInput : 'other';
-        const logo = prompt("Edit Logo Path (e.g. /src/assets/school_logo.png or https://...)", cls.logo || "");
+        const logo = prompt("Edit Logo Path (e.g. /src/assets/schoollogo.png or https://...)", cls.logo || "");
 
         const updatedData = courseData.map(c => c.id === cls.id ? { 
             ...c, 

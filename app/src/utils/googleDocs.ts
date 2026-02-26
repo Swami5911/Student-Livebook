@@ -1,8 +1,8 @@
 import { gapi } from 'gapi-script';
 
 // User provided credentials
-const CLIENT_ID = "288305694747-4n1lhg6ij3oq62v63nbcggfrbv3t22cj.apps.googleusercontent.com";
-const API_KEY = "AIzaSyDLmmsKGtetkfVinyfZ2pTQFXtQ3KEguqY";
+const CLIENT_ID = import.meta.env.VITE_GOOGLE_DOCS_CLIENT_ID;
+const API_KEY = import.meta.env.VITE_GOOGLE_DOCS_API_KEY;
 
 // Scopes: Docs (for lectures) + Drive (file picker) + Spreadsheets (Attendance)
 const SCOPES = "https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/spreadsheets";

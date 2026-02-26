@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyBOi4asEcNB1rqVUxKaY5ZJA5zE3V_-0Po",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "skd-livebook.firebaseapp.com",
   projectId: "skd-livebook",
   // Adding databaseURL explicitly to ensure Realtime Database works

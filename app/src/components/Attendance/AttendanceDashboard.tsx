@@ -249,6 +249,24 @@ export const AttendanceDashboard: React.FC<AttendanceDashboardProps> = ({ onBack
         }
     };
 
+    const handleCourseSelection = (courseName: string) => {
+        setBulkCourseName(courseName);
+        
+        // If an existing course is chosen, auto-fill the text area with its current roster
+        const existingStudents = allStudents.filter(s => s.course.toUpperCase() === courseName.trim().toUpperCase());
+        
+        if (existingStudents.length > 0) {
+            // Sort by roll number for a cleaner list
+            existingStudents.sort((a,b) => a.studentId.localeCompare(b.studentId));
+            
+            const prefillData = existingStudents.map(s => `${s.studentId}\t${s.name}`).join('\n');
+            setBulkInput(prefillData);
+        } else {
+            // If it's a new or empty course, clear the textarea
+            setBulkInput('');
+        }
+    };
+
     const handleBulkUpload = async () => {
         setUploadError('');
         const trimmedCourseName = bulkCourseName.trim();
@@ -497,9 +515,13 @@ export const AttendanceDashboard: React.FC<AttendanceDashboardProps> = ({ onBack
                                 className="att-input"
                                 placeholder="e.g. B.Tech 1st Year, BCA 2nd Year"
                                 value={bulkCourseName}
-                                onChange={e => setBulkCourseName(e.target.value)}
+                                onChange={e => handleCourseSelection(e.target.value)}
+                                list="bulk-course-options"
                             />
-                            <p style={{fontSize: '0.8rem', color: '#94a3b8', marginTop: '4px'}}>This will create a new group in the dropdown.</p>
+                            <datalist id="bulk-course-options">
+                                {courses.map(c => <option key={c} value={c} />)}
+                            </datalist>
+                            <p style={{fontSize: '0.8rem', color: '#94a3b8', marginTop: '4px'}}>Select an existing class to append/update, or type a new name.</p>
                         </div>
 
                         <div className="form-group">

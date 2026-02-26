@@ -389,9 +389,9 @@ function App() {
         <div className="container nav-content">
           <div className="brand" style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
             <img 
-                src={activeClass?.logo || defaultLogo} 
+                src={(activeClass?.logo && activeClass.logo !== '/src/assets/universitylogo.png') ? activeClass.logo : defaultLogo} 
                 alt="Logo" 
-                style={{height: '50px', maxHeight: '100%', cursor: 'pointer', objectFit: 'contain'}} 
+                style={{height: '45px', maxHeight: '100%', cursor: 'pointer', objectFit: 'contain'}} 
                 className="nav-logo" 
                 onClick={() => setShowLandingPage(true)}
                 title="Back to Landing Page"

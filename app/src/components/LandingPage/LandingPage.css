@@ -1,8 +1,7 @@
 /* Landing Page Variables */
 :root {
-  --lp-primary-dark: #1a237e; /* Navy Blue */
-  --lp-primary-light: #283593;
-  --lp-accent: #ffb300; /* Gold/Yellow accent */
+  --lp-primary-dark: #1e1b4b; /* Deep Navy Blue from Mockup */
+  --lp-accent: #fbbf24; /* Vibrant yellow */
   --lp-text-light: #ffffff;
   --lp-text-dark: #333333;
   --lp-bg-light: #f5f5f5;
@@ -21,11 +20,12 @@
 .lp-header {
   background-color: var(--lp-primary-dark);
   color: var(--lp-text-light);
-  padding: 10px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  padding: 15px 0; /* Slightly more padding for breathing room */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Softer shadow */
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 .lp-container {
@@ -44,14 +44,16 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.lp-brand:hover {
+  transform: scale(1.02);
 }
 
 .lp-logo {
-  height: 60px;
+  height: 65px; /* Slightly larger logo */
   width: auto;
-  /* background: white; Removed as per user request */
-  /* padding: 2px; */
-  /* border-radius: 4px; */
 }
 
 .lp-uni-name-header {
@@ -77,18 +79,21 @@
 .lp-btn-nav {
   background-color: var(--lp-accent);
   color: var(--lp-primary-dark);
-  padding: 8px 20px;
-  border-radius: 4px;
-  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 10px rgba(251, 191, 36, 0.2);
 }
 
 .lp-btn-nav:hover {
-  background-color: #ffca28;
-  transform: translateY(-1px);
+  background-color: #f59e0b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
 }
 
 .lp-btn-outline {
@@ -114,21 +119,10 @@
 
 /* Hero Section */
 .lp-hero {
-  background: linear-gradient(135deg, #e0f2fe, #ffffff); /* Subtle light blue gradient */
+  background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%);
   padding: 120px 0;
   position: relative;
   overflow: hidden;
-}
-
-.lp-hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 60%);
-  z-index: 1;
 }
 
 .lp-hero-content {
@@ -268,22 +262,33 @@
 }
 
 .lp-card {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   text-align: center;
+  cursor: default;
 }
 
 .lp-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(30, 27, 75, 0.1); /* navy tint shadow */
+  background: white;
+  border-color: rgba(251, 191, 36, 0.3); /* subtle yellow border glow */
 }
 
 .lp-card-icon {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.lp-card:hover .lp-card-icon {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .lp-card h3 {

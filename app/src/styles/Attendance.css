@@ -1,44 +1,4 @@
 
-.attendance-setup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    animation: fadeIn 0.5s ease;
-}
-
-.setup-card {
-    background: white;
-    padding: 3rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    text-align: center;
-    max-width: 500px;
-    width: 100%;
-}
-
-.setup-card input {
-    width: 100%;
-    padding: 1rem;
-    margin: 1.5rem 0;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-.btn-connect {
-    background: #10b981;
-    color: white;
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
 .attendance-dashboard {
     background: #f8fafc;
     min-height: 100vh;
@@ -55,6 +15,15 @@
     padding: 1rem 2rem;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.btn-icon {
+    background: #e2e8f0;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .att-actions {
@@ -80,7 +49,7 @@
 
 .att-content {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 300px 1fr;
     gap: 2rem;
 }
 
@@ -90,6 +59,121 @@
     border-radius: 12px;
     height: fit-content;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+.att-input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+}
+
+.mark-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.mark-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.mark-card.card-p {
+    border-color: #10b981;
+    background: #ecfdf5;
+}
+.mark-card.card-a {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+.mark-card.card-l {
+    border-color: #f59e0b;
+    background: #fffbeb;
+}
+
+.mark-roll {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.mark-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 1rem;
+    color: #1e293b;
+}
+
+.status-toggles {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.toggle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #cbd5e1;
+    background: white;
+    font-weight: bold;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.toggle-btn:hover {
+    background: #f1f5f9;
+}
+
+.toggle-btn.active-p {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+.toggle-btn.active-a {
+    background: #ef4444;
+    color: white;
+    border-color: #ef4444;
+}
+
+.toggle-btn.active-l {
+    background: #f59e0b;
+    color: white;
+    border-color: #f59e0b;
+}
+
+.btn-save-att {
+    background: #4f46e5;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-save-att:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .att-table {
@@ -109,64 +193,15 @@
 }
 
 .att-table td {
-    padding: 0.8rem 1rem;
+    padding: 1rem;
     border-bottom: 1px solid #e2e8f0;
 }
 
-.status-p {
-    background: #dcfce7;
-    color: #166534;
-    text-align: center;
-    font-weight: bold;
-}
-
-.status-a {
-    background: #fee2e2;
-    color: #991b1b;
-    text-align: center;
-    font-weight: bold;
-}
-
-.mark-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.mark-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 2px solid #e2e8f0;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-align: center;
-}
-
-.mark-card.selected {
-    border-color: #10b981;
-    background: #ecfdf5;
-}
-
-.mark-roll {
+.course-badge {
+    background: #e0e7ff;
+    color: #4f46e5;
+    padding: 4px 10px;
+    border-radius: 20px;
     font-size: 0.8rem;
-    color: #64748b;
-}
-
-.mark-name {
     font-weight: bold;
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-}
-
-.btn-save-att {
-    background: #4f46e5;
-    color: white;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
 }

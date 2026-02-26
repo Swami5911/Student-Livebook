@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import landingLogo from '../../assets/universitylogo.png';
 import { 
   BookOpen, 
   ArrowRight, 
@@ -91,9 +92,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnter = () => consol
       <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3 group cursor-pointer">
-            <div className="w-10 h-10 bg-indigo-950 rounded-lg flex items-center justify-center text-amber-400 group-hover:rotate-12 transition-transform">
-              <Zap size={24} fill="currentColor" />
-            </div>
+            <img src={landingLogo} alt="SKD Logo" className="h-12 w-auto transition-transform" />
             <div>
               <h1 className="font-black text-xl leading-tight text-indigo-950 italic">SKD</h1>
               <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500">Project Livebook</p>
@@ -352,9 +351,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnter = () => consol
       <footer className="py-12 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-indigo-950 rounded flex items-center justify-center text-amber-400">
-              <Zap size={14} fill="currentColor" />
-            </div>
+            <img src={landingLogo} alt="SKD Logo" className="h-8 w-auto grayscale opacity-80" />
             <span className="font-black text-lg text-indigo-950 italic">SKD</span>
           </div>
           <div className="text-slate-400 font-bold text-[10px] uppercase tracking-widest">

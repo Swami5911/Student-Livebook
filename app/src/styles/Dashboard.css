@@ -1,0 +1,96 @@
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.dashboard-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard-header p {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+}
+
+.lecture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.lecture-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lecture-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-light);
+}
+
+.card-number {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--color-border); /* Subtle background number */
+  opacity: 0.3;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.lecture-card:hover .card-number {
+  color: var(--color-primary-light);
+  opacity: 0.1;
+  transform: scale(1.1);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-content h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.card-action {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.lecture-card:hover .card-action {
+  opacity: 1;
+  transform: translateX(0);
+}

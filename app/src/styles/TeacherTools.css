@@ -1,0 +1,108 @@
+
+.teacher-tools-panel {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fff9e6; /* Light yellow to signify teacher note/tool */
+  border: 1px solid #fcd34d;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.teacher-tools-panel h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #b45309;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tool-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tool-item label {
+  font-weight: 600;
+  color: #78350f;
+}
+
+.edit-mode {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.edit-mode input {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.edit-mode .actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.view-mode {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.quiz-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.quiz-link:hover {
+  text-decoration: underline;
+}
+
+.no-link {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.btn-edit, .btn-save, .btn-cancel {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-edit {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.btn-edit:hover {
+  background-color: #d1d5db;
+}
+
+.btn-save {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #2563eb;
+}
+
+.btn-cancel {
+  background-color: transparent;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+}
+
+.btn-cancel:hover {
+  background-color: #f3f4f6;
+}

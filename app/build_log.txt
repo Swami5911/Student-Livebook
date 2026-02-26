@@ -1,0 +1,5 @@
+
+> app@0.0.0 build
+> tsc -b && vite build
+
+src/firebase.ts(19,7): error TS6133: 'analytics' is declared but its value is never read.

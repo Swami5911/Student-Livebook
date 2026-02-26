@@ -1,0 +1,96 @@
+UNIT 1 – LECTURE 1: Introduction to Internet of Things (IoT)
+Scope: Teacher-only content Includes: Full teaching script (what to speak), class flow, blackboard plan, and 10 MCQs Excludes: Student notes/content
+🎯 Learning Outcomes (State at the Start)
+By the end of this lecture, students should be able to:
+Define Internet of Things (IoT)
+Explain why IoT is needed
+Identify key components of an IoT system
+Describe common IoT applications
+Understand the basic working flow of IoT
+⏱️ Lecture Duration & Flow (90 Minutes)
+Time
+Activity
+0–5 min
+Warm-up & motivation
+5–20 min
+Introduction & definition
+20–35 min
+Keyword-by-keyword explanation
+35–55 min
+IoT working flow
+55–70 min
+Components of IoT
+70–80 min
+Applications & challenges
+80–90 min
+Quiz & recap
+🎤 FULL TEACHING SCRIPT (WORD-BY-WORD GUIDANCE)
+Opening (0–5 min)
+“Good morning everyone. Before we begin, tell me—how many of you use a smartphone, smartwatch, or smart TV?” (Pause; take responses) “Have you noticed how these devices connect to the internet and sometimes act automatically? This is not magic. This is a technology called the Internet of Things, or IoT.”
+Introduction & Definition (5–20 min)
+“In earlier days, devices performed only one task. A fan needed a switch. A light needed a person. Today, devices are connected and intelligent.”
+“The Internet of Things means connecting physical objects—like devices, machines, or appliances—to the internet so they can send data, receive data, and act automatically.”
+Write on board:
+Internet of Things (IoT):
+Network of physical objects embedded with sensors,
+software, and connectivity to collect and exchange data.
+“In simple words, IoT helps devices sense, think, and act.”
+Keyword-by-Keyword Explanation (20–35 min)
+Physical Objects
+“Physical objects are real-world items—phones, ACs, cars, machines.”
+Sensors
+“Sensors are devices that detect changes like temperature, motion, or light.”
+Software
+“Software analyzes the data and decides what action to take.”
+Communication Technologies
+“Wi-Fi, Bluetooth, and mobile networks help devices communicate.”
+Automation
+“Automation means devices work without human help.”
+Ask:
+“Can you think of an example where something works automatically at home?”
+How IoT Works (35–55 min)
+“IoT works in a cycle.”
+Write and explain:
+Sensing → Transmission → Processing → Decision → Action
+“This cycle repeats continuously.”
+Use example:
+“A smart light senses darkness, sends data to the cloud, software decides, and the light turns ON.”
+Components of IoT (55–70 min)
+Explain one-by-one:
+Sensors (data collection)
+Actuators (action)
+Controller (decision-making)
+Connectivity (communication)
+Cloud (storage & analytics)
+Application (user interface)
+“Remember—sensors collect data, actuators take action.”
+Applications & Challenges (70–80 min)
+“IoT is used in homes, healthcare, cities, industries, and agriculture.”
+“But IoT also faces challenges like security, privacy, and data management.”
+Ask:
+“Why do you think security is important in IoT?”
+Recap (80–90 min)
+“Today we learned what IoT is, how it works, and where it is used. This forms the foundation for the entire course.”
+🧑‍🏫 Blackboard Plan
+IoT – Internet of Things
+→ Definition
+→ Keywords: Sensors, Software, Connectivity
+→ Working: Sense → Send → Process → Act
+→ Components
+→ Applications
+(Draw a simple IoT flow diagram.)
+🧠 Teaching Aids
+Slides with IoT overview diagram
+One real-life device example (phone/watch)
+Simple flowchart on board
+📝 QUIZ: LECTURE 1 (10 MCQs)
+IoT stands for: a) Internet of Technology b) Internet of Things c) Internal Objects Transfer d) Integrated Online Tools
+Which component collects data in IoT? a) Actuator b) Application c) Sensor d) Cloud
+Which of the following enables communication in IoT? a) Sensors b) Software c) Wi-Fi d) Actuators
+Automation in IoT means: a) Manual operation b) Human-controlled tasks c) Automatic action without human intervention d) Offline processing
+Which device takes action in an IoT system? a) Sensor b) Controller c) Actuator d) Cloud
+Which part stores and processes large IoT data? a) Sensor b) Controller c) Application d) Cloud
+Which is NOT an IoT application? a) Smart home b) Smart city c) Typewriter d) Healthcare monitoring
+Data in IoT is first collected by: a) Cloud b) Application c) Sensors d) Actuators
+Which network is commonly used in IoT? a) Fax b) Postal service c) Internet d) Newspaper
+The main advantage of IoT is: a) Increased manual work b) Automation and efficiency c) Reduced connectivity d) Offline processing

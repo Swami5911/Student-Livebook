@@ -1,0 +1,965 @@
+
+
+--- LU1 ---
+Unit 1: Basics of Information Technology
+
+
+========================================
+Lecture 1: Introduction to Computers
+========================================
+Class: IX | Subject: Computer Applications (Code 165) Duration: 40–45 minutes
+🎯 Learning Outcomes (CBSE-Aligned)
+By the end of this lecture, students should be able to:
+Clearly define a computer in their own words
+Explain how a computer works using the IPO cycle
+Identify key characteristics of a computer
+Relate computers to real-life and AI-based applications
+Understand that AI works on computers, not independently
+⏱️ Pedagogical Time Flow (45 Minutes)
+Time
+Pedagogical Purpose
+5 min
+Context building & curiosity
+10 min
+Definition & meaning
+10 min
+IPO cycle explanation
+10 min
+Characteristics & uses
+5 min
+AI integration
+5 min
+Recap & assessment
+🧠 Conceptual Entry Point (Why This Topic First)
+Teacher Understanding: This lecture sets the foundation for the entire course. Students must understand:
+Computer ≠ magic
+Computer = machine that follows instructions
+AI = advanced software layer, not a separate entity
+If this concept is weak, later topics (CPU, memory, AI, cyber safety) will confuse students.
+🎤 Lecture Script (Teacher Delivery – Speakable Text)
+Opening (First 2–3 Minutes)
+“Good morning students. Before we talk about Artificial Intelligence or advanced tools, we must first understand one basic question: What is a computer? You all use mobile phones, but have you ever thought of them as computers?”
+(Wait for responses)
+“Today, we will understand what a computer is, how it works, and why it is the foundation of all modern technology.”
+📘 Core Explanation Strategy
+1️⃣ Teaching the Definition (Deep Approach)
+Teacher Focus: Avoid one-line definition only. Build meaning gradually.
+
+
+========================================
+Lecture Script:
+========================================
+“A computer is not just a machine that shows information. It is an electronic device that accepts data, processes it using instructions, produces useful output, and stores it for future use.”
+Emphasize:
+Electronic
+Instructions
+Automation
+Explain clearly:
+Computer does not think
+Computer follows programs
+Intelligence is artificial
+🧑‍🏫 Blackboard Plan (Step-by-Step)
+Write in stages (not all at once):
+Computer:
+An electronic device that accepts data,
+processes it, produces output,
+and stores information.
+Underline:
+Input
+Process
+Output
+Storage
+🔄 Teaching the IPO Cycle (Core Concept)
+Pedagogical Approach:
+Start from daily life
+Then move to abstraction
+
+
+========================================
+Lecture Script:
+========================================
+“Whenever you give something to a computer, it first accepts it, then works on it, and finally gives you a result. This process is called the IPO cycle.”
+Draw on board:
+INPUT → PROCESS → OUTPUT
+Give two examples verbally:
+Calculator
+Online exam result
+🧑‍🏫 Blackboard Diagram (Mandatory)
+       INPUT
+     (Keyboard, Mouse)
+            ↓
+        PROCESS
+           (CPU)
+            ↓
+        OUTPUT
+     (Monitor, Printer)
+📌 Tell students explicitly:
+“This diagram is important for exams.”
+⭐ Teaching Characteristics of Computer (Conceptual Intent)
+Teacher Strategy:
+Explain why these characteristics matter.
+
+
+========================================
+Lecture Script:
+========================================
+“A computer is powerful not because it looks smart, but because it is fast, accurate, and never gets tired.”
+Explain one by one:
+Speed → Time saving
+Accuracy → Depends on input
+Diligence → No fatigue
+Automation → Works independently after instruction
+Storage → Memory advantage over humans
+🤖 AI Integration (Teacher Conceptual Framing)
+Purpose of AI Here:
+NOT to teach AI deeply
+ONLY to contextualize relevance
+
+
+========================================
+Lecture Script:
+========================================
+“When your phone unlocks using your face, it looks intelligent. But remember, the phone is still a computer. AI is only a software that helps the computer make better decisions.”
+Stress this sentence (very important):
+“AI cannot exist without computers.”
+⚠️ Common Student Misconceptions (Teacher Awareness)
+Misconception
+Correction Strategy
+Computer can think
+Explain instruction-based work
+AI is a machine
+Clarify AI is software
+Computer always correct
+Explain wrong input → wrong output
+👥 Classroom Engagement Prompts
+Ask students:
+“Is a washing machine a computer?”
+“Can a computer feel emotions?”
+“What happens if we give wrong data?”
+These questions develop computational thinking.
+📊 Assessment Checkpoints (During Class)
+Oral Questions:
+What is a computer?
+What does IPO stand for?
+Can a computer think on its own?
+How is AI related to computers?
+🏠 Homework (Pedagogical Purpose)
+Write on board:
+Learn definition
+Draw IPO diagram
+Observe one AI feature in daily life
+Explain why:
+“Observation helps you understand technology better.”
+🎯 Teacher Reflection (Post-Class)
+After class, teacher should check:
+Can students explain IPO in their own words?
+Are students confusing AI with computers?
+Did students copy diagrams correctly?
+
+
+--- LU2 ---
+
+
+========================================
+Lecture 2: Data and Information
+========================================
+🎯 Learning Outcomes (CBSE-Aligned)
+Students will be able to:
+Define data and information
+Differentiate between data and information
+Explain conversion of data into information
+Understand the role of data in AI systems
+⏱️ Time Flow (45 Minutes)
+Time
+Teaching Focus
+5 min
+Recap of Lecture 1
+10 min
+Teaching Data
+10 min
+Teaching Information
+10 min
+Difference + examples
+5 min
+AI integration
+5 min
+Recap & assessment
+🎤 Lecture Script (Teacher Delivery)
+Opening
+“In the previous class, we learned what a computer is. Today we will learn what we actually give to a computer and what we get back from it.”
+Teaching “Data”
+“Data means raw facts. These facts by themselves do not tell us anything.”
+Give examples:
+Roll numbers
+Marks list
+Teaching “Information”
+“When data is processed and becomes meaningful, it is called information.”
+Explain:
+Report cards
+Results
+🧑‍🏫 Blackboard Plan
+Write stepwise:
+Data:
+Raw facts and figures.
+Information:
+Processed data.
+Then draw:
+DATA → PROCESSING → INFORMATION
+🤖 AI Integration – Teacher Explanation
+“AI systems cannot work without data. The more accurate the data, the better the AI result.”
+Use example:
+YouTube / Netflix recommendations
+⚠️ Important Concept to Stress
+Explain GIGO clearly:
+“If we give wrong data to a computer, the result will also be wrong.”
+👥 Classroom Engagement
+Ask:
+Give one example of data
+Give one example of information
+What happens if data is wrong?
+📊 Assessment Questions
+What is data?
+What is information?
+How does data become information?
+How does AI use data?
+🏠 Homework
+Definitions
+Diagram
+One AI example
+🎯 Teacher Reflection
+Students should not confuse data with information
+Diagrams must be neat and labeled
+AI understanding should be conceptual, not technical
+
+
+--- LU3 ---
+
+
+========================================
+Lecture 3: Characteristics of a Computer
+========================================
+🎯 Learning Outcomes (CBSE-Aligned)
+Students will be able to:
+Identify and explain computer characteristics
+Compare computer abilities with human abilities
+Understand importance of characteristics in AI systems
+⏱️ Pedagogical Time Flow (45 Minutes)
+Time
+Teaching Focus
+5 min
+Recap (Lecture 2)
+15 min
+Characteristics explanation
+10 min
+Examples & comparison
+5 min
+AI linkage
+5 min
+Assessment & recap
+5 min
+Student interaction
+🎤 Lecture Script (Teacher Delivery)
+Opening
+“In the previous lecture, we learned about data and information. Today we will understand why computers are so powerful and useful.”
+Teaching Characteristics (Concept-Driven)
+Explain one characteristic at a time:
+Speed → Time-saving
+Accuracy → Correct input → Correct output
+Diligence → No fatigue
+Automation → Works independently
+Storage → Large memory
+🧑‍🏫 Blackboard Plan
+Write progressively:
+Characteristics of Computer:
+1. Speed
+2. Accuracy
+3. Diligence
+4. Automation
+5. Storage
+Explain each with one example.
+🤖 AI Integration – Teacher Explanation
+“AI systems require computers that are fast, accurate, and capable of storing large data. Without these characteristics, AI cannot function.”
+👥 Classroom Interaction
+Ask:
+“Can a computer get tired?”
+“Why do banks use computers?”
+“How does automation help humans?”
+📊 Assessment (During Class)
+Name any two characteristics of a computer.
+Why is diligence important?
+How does speed help AI systems?
+🏠 Homework (Write on Board)
+Write characteristics with examples
+Observe an automated system
+🎯 Teacher Reflection
+Students should connect characteristics with real-life
+Avoid rote learning
+Encourage examples from daily life
+
+
+--- LU4 ---
+
+
+========================================
+Lecture 4: Limitations of Computers & Human vs Computer
+========================================
+🎯 Learning Outcomes (CBSE-Aligned)
+Students will be able to:
+Identify limitations of computers
+Understand why humans are essential
+Compare humans and computers logically
+Develop realistic understanding of AI
+⏱️ Pedagogical Time Flow (45 Minutes)
+Time
+Teaching Focus
+5 min
+Recap (Characteristics)
+15 min
+Limitations explanation
+10 min
+Human vs Computer
+5 min
+AI limitation discussion
+5 min
+Assessment
+5 min
+Reflection
+🎤 Lecture Script (Teacher Delivery)
+Opening
+“In the last lecture, we saw how powerful computers are. But today we will understand why computers cannot replace humans.”
+Teaching Limitations (Conceptual Focus)
+Explain slowly:
+Computer follows instructions
+No emotions
+No judgment
+Use daily-life examples:
+Teacher vs machine
+Doctor vs software
+🧑‍🏫 Blackboard Plan
+Write step-by-step:
+Limitations of Computers:
+1. No intelligence
+2. No emotions
+3. Depends on humans
+4. GIGO
+5. No decision-making
+Then draw comparison table.
+🤖 AI Integration – Teacher Explanation
+“AI looks intelligent, but it still depends on data and rules. Human judgment is always needed.”
+👥 Classroom Engagement
+Ask:
+“Can a computer punish or forgive?”
+“Can AI understand feelings?”
+Encourage discussion.
+📊 Assessment Questions
+What is GIGO?
+Can a computer think?
+Why humans are superior to computers?
+🏠 Homework (Write on Board)
+Write limitations
+Human vs computer table
+🎯 Teacher Reflection
+Ensure students don’t overestimate AI
+Encourage balanced thinking
+Link ethics subtly
+
+
+--- LU5 ---
+
+
+========================================
+Lecture 5: Components of a Computer System
+========================================
+🎯 Learning Outcomes (CBSE-Aligned)
+Students will be able to:
+Identify major computer components
+Explain functions of CPU, memory, and devices
+Understand interconnection of components
+Relate hardware to AI functionality
+⏱️ Pedagogical Time Flow (45 Minutes)
+Time
+Teaching Focus
+5 min
+Recap (Human vs Computer)
+15 min
+Components explanation
+10 min
+CPU deep explanation
+5 min
+AI hardware linkage
+5 min
+Assessment
+5 min
+Diagram & recap
+🎤 Lecture Script (Teacher Delivery)
+Opening
+“Last time we learned that computers have limitations. Today we will learn what parts make a computer work.”
+Teaching Strategy
+Explain in order:
+Input devices
+CPU (brain)
+Memory
+Output devices
+Use human body analogy:
+Brain → CPU
+Eyes/Ears → Input
+Mouth → Output
+🧑‍🏫 Blackboard Plan
+Write stepwise:
+Components of Computer System:
+1. Input Devices
+2. CPU
+3. Memory / Storage
+4. Output Devices
+Then draw block diagram.
+🤖 AI Integration – Teacher Explanation
+“AI needs cameras, microphones, strong processors, and memory. Without hardware, AI cannot exist.”
+👥 Classroom Interaction
+Ask:
+“Which input device helps AI hear?”
+“Why does AI need more memory?”
+📊 Assessment Questions
+Name parts of CPU.
+Why is CPU called brain?
+Give one AI-related input device.
+🏠 Homework (Write on Board)
+Draw computer system diagram
+Learn CPU parts
+🎯 Teacher Reflection
+Students must not confuse memory and storage
+Diagrams should be neat and labeled
+AI discussion should remain conceptual
+
+
+--- LU6 ---
+
+
+========================================
+Lecture 6: Input Devices
+========================================
+🎯 Learning Outcomes (CBSE-Aligned)
+Students will be able to:
+Define input devices
+Identify common and advanced input devices
+Understand their role in AI applications
+⏱️ Pedagogical Time Flow (45 Minutes)
+Time
+Teaching Focus
+5 min
+Recap (Components)
+15 min
+Input devices explanation
+10 min
+Device-wise examples
+5 min
+AI linkage
+5 min
+Assessment
+5 min
+Diagram & recap
+🎤 Lecture Script (Teacher Delivery)
+Opening
+“In the last lecture, we learned about computer components. Today we will focus on how we give instructions to a computer.”
+Teaching Strategy
+Explain devices one by one:
+Keyboard → typing
+Mouse → pointing
+Scanner → paper to digital
+Microphone → sound input
+Webcam → image/video input
+Use human senses analogy:
+Eyes → Camera
+Ears → Microphone
+Hands → Keyboard/Mouse
+🧑‍🏫 Blackboard Plan
+Write:
+Input Devices:
+- Keyboard
+- Mouse
+- Scanner
+- Microphone
+- Web Camera
+Then draw simple diagram.
+🤖 AI Integration – Teacher Explanation
+“AI systems need eyes and ears. Input devices provide this capability.”
+Examples:
+Face unlock
+Voice assistant
+👥 Classroom Interaction
+Ask:
+“Which input device helps AI see?”
+“Which device helps AI hear?”
+📊 Assessment Questions
+Define input devices.
+Name two AI-related input devices.
+What is the use of a scanner?
+🏠 Homework (Write on Board)
+Write uses of keyboard and mouse
+Draw input devices diagram
+🎯 Teacher Reflection
+Ensure students don’t confuse input/output devices
+Use real devices if possible
+Keep AI explanation conceptual
+
+
+--- LU7 ---
+
+
+========================================
+Lecture 7: Output Devices
+========================================
+🎯 Learning Outcomes (CBSE-Aligned)
+Students will be able to:
+Define output devices
+Identify common output devices
+Understand soft copy and hard copy
+Relate output devices to AI-based applications
+⏱️ Pedagogical Time Flow (45 Minutes)
+Time
+Teaching Focus
+5 min
+Recap (Input Devices)
+15 min
+Output devices explanation
+10 min
+Device-wise examples
+5 min
+AI linkage
+5 min
+Assessment
+5 min
+Diagram & recap
+🎤 Lecture Script (Teacher Delivery)
+Opening
+“In the last class, we learned how we give data to a computer. Today we will learn how a computer gives results back to us.”
+Teaching Strategy
+Explain devices one by one:
+Monitor → visual output
+Printer → paper output
+Speaker → sound output
+Headphones → personal output
+Projector → large display
+Use human communication analogy:
+Eyes → Monitor
+Ears → Speaker
+🧑‍🏫 Blackboard Plan
+Write:
+Output Devices:
+- Monitor
+- Printer
+- Speaker
+- Headphones
+- Projector
+Then explain Soft Copy vs Hard Copy.
+🤖 AI Integration – Teacher Explanation
+“AI systems produce smart outputs, but output devices are needed to show or speak those results.”
+Examples:
+Voice assistant speaking
+AI showing image recognition result
+👥 Classroom Interaction
+Ask:
+“Is a printer input or output?”
+“Can AI speak without speakers?”
+📊 Assessment Questions
+Define output devices.
+What is soft copy?
+Name two audio output devices.
+🏠 Homework (Write on Board)
+Write uses of any two output devices
+Draw output devices diagram
+🎯 Teacher Reflection
+Ensure students distinguish input vs output
+Emphasize examples from daily life
+Keep AI explanation simple and realistic
+
+
+--- LU8 ---
+
+
+========================================
+Lecture 8: Central Processing Unit (CPU)
+========================================
+🎯 Learning Outcomes (CBSE-Aligned)
+Students will be able to:
+Define CPU
+Explain CPU functions
+Describe ALU and CU
+Relate CPU to AI processing
+⏱️ Pedagogical Time Flow (45 Minutes)
+Time
+Teaching Focus
+5 min
+Recap (Output Devices)
+15 min
+CPU concept
+10 min
+ALU & CU explanation
+5 min
+AI linkage
+5 min
+Assessment
+5 min
+Diagram & recap
+🎤 Lecture Script (Teacher Delivery)
+Opening
+“Just like your brain controls your body, the CPU controls the computer.”
+Teaching Strategy
+Explain:
+CPU as brain
+ALU as calculator
+CU as manager
+Use school analogy:
+Principal → CU
+Accountant → ALU
+🧑‍🏫 Blackboard Plan
+Write:
+CPU – Central Processing Unit
+Functions:
+1. Processing
+2. Control
+Then draw CPU diagram.
+🤖 AI Integration – Teacher Explanation
+“AI needs powerful CPUs because AI involves heavy calculations.”
+Mention:
+CPU + GPU (only concept)
+👥 Classroom Interaction
+Ask:
+“Which part of CPU does calculations?”
+“Who controls all devices?”
+📊 Assessment Questions
+Define CPU.
+Name parts of CPU.
+What is role of ALU?
+🏠 Homework (Write on Board)
+Draw CPU diagram
+Learn ALU and CU
+🎯 Teacher Reflection
+Avoid deep hardware complexity
+Focus on concept clarity
+Reinforce diagrams
+
+
+--- LU9 ---
+
+
+========================================
+Lecture 9: Memory and Storage Devices
+========================================
+🎯 Learning Outcomes (CBSE-Aligned)
+Students will be able to:
+Explain memory and storage
+Differentiate between RAM and ROM
+Identify storage devices
+Understand role of memory in AI
+⏱️ Pedagogical Time Flow (45 Minutes)
+Time
+Teaching Focus
+5 min
+Recap (CPU)
+15 min
+Memory explanation
+10 min
+Storage devices
+5 min
+AI linkage
+5 min
+Assessment
+5 min
+Diagram & recap
+🎤 Lecture Script (Teacher Delivery)
+Opening
+“Just like humans remember things, computers also need memory.”
+Teaching Strategy
+Explain:
+Memory = working space
+Storage = long-term storage
+Use student analogy:
+Brain → RAM
+Notebook → Storage
+🧑‍🏫 Blackboard Plan
+Write:
+Memory:
+- RAM (Temporary)
+- ROM (Permanent)
+Storage Devices:
+- Hard Disk
+- Pen Drive
+- CD/DVD
+Draw diagram.
+🤖 AI Integration – Teacher Explanation
+“AI systems need large memory to work fast and large storage to learn from data.”
+👥 Classroom Interaction
+Ask:
+“What happens if RAM is full?”
+“Why AI needs storage?”
+📊 Assessment Questions
+Define RAM.
+What is ROM?
+Name any two storage devices.
+🏠 Homework (Write on Board)
+Learn differences
+Draw diagram
+🎯 Teacher Reflection
+Ensure students understand volatile vs non-volatile
+Use analogies
+Reinforce diagrams
+
+
+--- LU10 ---
+
+
+========================================
+Lecture 10: Types of Software
+========================================
+🎯 Learning Outcomes (CBSE-Aligned)
+Students will be able to:
+Define software
+Differentiate types of software
+Understand role of software in AI systems
+⏱️ Pedagogical Time Flow (45 Minutes)
+Time
+Teaching Focus
+5 min
+Recap (Memory & Storage)
+15 min
+Software explanation
+10 min
+System vs application
+5 min
+AI linkage
+5 min
+Assessment
+5 min
+Diagram & recap
+🎤 Lecture Script (Teacher Delivery)
+Opening
+“We have learned about hardware. Today we will learn what makes hardware work.”
+Teaching Strategy
+Explain:
+Software as instructions
+System software = manager
+Application software = helper
+Use school analogy:
+Principal → System software
+Teacher → Application software
+🧑‍🏫 Blackboard Plan
+Write:
+Software:
+1. System Software
+2. Application Software
+Draw classification diagram.
+🤖 AI Integration – Teacher Explanation
+“AI tools like voice assistants are application software that run on system software.”
+👥 Classroom Interaction
+Ask:
+“Can hardware work without software?”
+“Is AI hardware or software?”
+📊 Assessment Questions
+Define software.
+Name one system software.
+Give one AI-based application.
+🏠 Homework (Write on Board)
+Write difference between software types
+Draw diagram
+🎯 Teacher Reflection
+Students should not confuse hardware and software
+Reinforce examples
+Keep AI explanation simple
+
+
+--- LU11 ---
+
+
+========================================
+Lecture 11: Operating System
+========================================
+🎯 Learning Outcomes (CBSE-Aligned)
+Students will be able to:
+Define operating system
+Explain major OS functions
+Identify examples of OS
+Understand OS role in AI systems
+⏱️ Pedagogical Time Flow (45 Minutes)
+Time
+Teaching Focus
+5 min
+Recap (Types of Software)
+15 min
+OS concept & definition
+10 min
+OS functions
+5 min
+AI linkage
+5 min
+Assessment
+5 min
+Diagram & recap
+🎤 Lecture Script (Teacher Delivery)
+Opening
+“We learned about software. Today we will study the most important system software called the Operating System.”
+Teaching Strategy
+Explain OS as:
+Manager of computer
+Bridge between user and hardware
+Use school analogy:
+Principal → Operating System
+Teachers/Staff → Application software
+Students → Users
+🧑‍🏫 Blackboard Plan
+Write:
+Operating System (OS):
+- System Software
+- Interface between user & hardware
+Then list functions.
+🤖 AI Integration – Teacher Explanation
+“AI applications cannot directly access hardware. The operating system allows AI programs to use CPU, camera, and memory.”
+👥 Classroom Interaction
+Ask:
+“Can a computer work without OS?”
+“Is Android an OS?”
+📊 Assessment Questions
+Define OS.
+Name two functions of OS.
+Give one AI-based OS feature.
+🏠 Homework (Write on Board)
+Write OS functions
+Draw OS diagram
+🎯 Teacher Reflection
+Ensure students understand OS as system software
+Avoid deep technical terms
+Relate OS to daily device usage
+
+
+--- LU12 ---
+
+
+========================================
+Lecture 12: Computer Networks & Internet Basics
+========================================
+🎯 Learning Outcomes (CBSE-Aligned)
+Students will be able to:
+Define computer networks
+Identify types of networks
+Understand internet basics
+Relate networks with AI services
+⏱️ Pedagogical Time Flow (45 Minutes)
+Time
+Teaching Focus
+5 min
+Recap (Operating System)
+15 min
+Network concept
+10 min
+Types of networks
+5 min
+Internet explanation
+5 min
+AI linkage
+5 min
+Assessment
+🎤 Lecture Script (Teacher Delivery)
+Opening
+“In the last lecture, we learned how a computer is managed internally. Today we will learn how computers communicate with each other.”
+Teaching Strategy
+Explain:
+Network = connection
+Types based on area
+Use daily-life analogy:
+Friends group → Network
+City → MAN
+World → WAN
+🧑‍🏫 Blackboard Plan
+Write:
+Computer Network:
+Connection of computers to share data.
+Types:
+PAN, LAN, MAN, WAN
+Draw simple diagram.
+🤖 AI Integration – Teacher Explanation
+“AI tools like chatbots and translators work through the internet and cloud servers.”
+👥 Classroom Interaction
+Ask:
+“Which network do you use at home?”
+“Is the internet a WAN?”
+📊 Assessment Questions
+Define computer network.
+Name types of networks.
+Why internet is important for AI?
+🏠 Homework (Write on Board)
+Learn network types
+Draw diagram
+🎯 Teacher Reflection
+Ensure students understand scale difference (PAN → WAN)
+Avoid technical networking details
+Focus on real-life usage
+Revisions &  assessment
+Unit 1: Revision & Assessment
+🎯 Purpose of Revision Lecture
+This lecture aims to:
+Consolidate Unit 1 concepts
+Clear misconceptions
+Prepare students for assessment
+Strengthen diagram-based answers
+Connect fundamentals with AI awareness
+⏱️ Revision Class Plan (45–60 Minutes)
+Time
+Activity
+10 min
+Concept recap (oral)
+10 min
+Diagram revision
+10 min
+MCQ discussion
+10 min
+Case-based discussion
+10 min
+Doubt clearing
+🎤 Revision Lecture Script (Teacher Use)
+“Unit 1 is the foundation of computer studies. If this unit is clear, all future chapters will become easy.”
+Use rapid questioning:
+What is IPO?
+CPU parts?
+RAM vs ROM?
+AI = hardware or software?
+🧑‍🏫 Blackboard Plan (Revision)
+Write headings only:
+Unit 1 Revision:
+- Computer
+- Data vs Information
+- Components
+- CPU
+- Memory
+- Software
+- Networks
+Ask students to explain.
+📝 Assessment Blueprint (CBSE Style – Suggested)
+Section
+Type
+Marks
+A
+MCQs
+10
+B
+Short Answer
+10
+C
+Long Answer
+20
+D
+Case-Based
+10
+Total
+50
+🤖 AI Integration (Teacher Emphasis)
+Clarify AI myths
+Reinforce: AI works on computers
+Stress ethical & responsible use
+🧪 Evaluation Guidelines
+Focus on concept clarity
+Diagrams must be neat and labeled
+Encourage explanation over memorization
+🏠 Assignment / Test Options
+Unit Test (written)
+Oral viva
+Diagram test
+Group discussion on “AI in daily life”

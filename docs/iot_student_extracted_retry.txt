@@ -1,0 +1,139 @@
+LU1UNIT 1 – LECTURE 1: Introduction to Internet of Things (IoT)
+🌍 Introduction
+In today’s digital world, devices are no longer limited to performing single tasks. Everyday objects like mobile phones, smart watches, refrigerators, streetlights, and vehicles are now connected to the internet and can communicate with each other.
+This concept of connecting physical objects to the internet and making them intelligent is called the Internet of Things (IoT).
+IoT enables devices to collect data from the environment, analyze it, and take appropriate actions automatically without human intervention.
+📌 Definition of Internet of Things (IoT)
+The Internet of Things (IoT) is a network of physical objects embedded with sensors, software, and communication technologies that allow them to collect, exchange, and process data over the internet.
+Simple Definition
+IoT is the technology that connects physical devices to the internet so that they can communicate and work intelligently.
+🔍 Understanding the Definition (Keyword-by-Keyword)
+To fully understand IoT, let us explain each important term used in the definition.
+🔹 Physical Objects (Things)
+Physical objects are real-world items that exist in our surroundings and can be identified uniquely.
+Examples:
+Mobile phones
+Smart watches
+Air conditioners
+Cars and buses
+Machines used in factories
+In IoT, these objects are enhanced with technology so they can sense and communicate.
+🔹 Sensors
+A sensor is a device that detects changes in the physical environment and converts them into digital data.
+Common types of sensors:
+Temperature sensor – measures heat
+Motion sensor – detects movement
+Light sensor – detects light intensity
+Pressure sensor – measures force or pressure
+Example: A temperature sensor inside a smart AC continuously measures room temperature.
+📌 Sensors are the starting point of any IoT system.
+🔹 Software
+Software refers to programs and instructions that control how the device behaves.
+In IoT systems, software is used to:
+Process sensor data
+Apply rules or logic
+Decide what action should be taken
+Example: Software decides to turn OFF the AC when the room becomes cold enough.
+🔹 Communication Technologies
+Communication technologies allow IoT devices to send and receive data over networks.
+Common communication methods:
+Wi-Fi
+Bluetooth
+ZigBee
+Mobile networks (4G / 5G)
+Without communication, IoT devices cannot share data or receive commands.
+🔹 Data
+Data is the information collected by sensors.
+Examples of data:
+Temperature value (e.g., 25°C)
+Heartbeat rate
+Speed of a vehicle
+Light intensity
+This data is the basis for decision-making in IoT systems.
+🔹 Automatic Action (Automation)
+Automation means performing tasks automatically without human involvement.
+Example: Streetlights turn ON automatically when it becomes dark.
+📌 Automation makes IoT systems efficient and reliable.
+🧠 How IoT Works (Step-by-Step Flow)
+An IoT system generally works in the following sequence:
+Sensing: Sensors collect data from the environment
+Transmission: Data is sent through the internet
+Processing: Software analyzes the data
+Decision: System decides what action is required
+Action: Device performs the action automatically
+This cycle continues continuously.
+🧩 Components of an IoT System (Basic Overview)
+An IoT system is made up of several essential components:
+🔹 1. Sensors
+Detect physical conditions
+Convert real-world signals into data
+Example: Temperature sensor, motion sensor
+🔹 2. Actuators
+Actuators perform actions based on decisions made by the system.
+Examples:
+Motor opening a door
+Valve controlling water flow
+📌 Sensors collect data, actuators take action.
+🔹 3. Processing Unit (Controller)
+The processing unit acts as the brain of the IoT device.
+Functions:
+Receives sensor data
+Processes information
+Sends commands to actuators
+Examples: Arduino, Raspberry Pi
+🔹 4. Connectivity
+Connectivity enables communication between devices and cloud platforms.
+Examples: Wi-Fi, Bluetooth, cellular networks
+🔹 5. Cloud Platform
+The cloud is a remote server system used for:
+Storing large amounts of data
+Performing data analysis
+Managing devices
+Examples: AWS, Google Cloud
+🔹 6. Application Layer
+This is the interface between the user and the IoT system.
+Examples:
+Mobile apps
+Web dashboards
+Users can monitor and control IoT devices through applications.
+🌐 Applications of Internet of Things
+IoT is widely used in many real-life areas:
+🔹 Smart Homes
+Smart lights
+Smart AC and fans
+Smart door locks
+🔹 Healthcare
+Remote patient monitoring
+Heart rate and fitness tracking
+🔹 Smart Cities
+Smart traffic signals
+Waste management systems
+🔹 Industrial IoT (IIoT)
+Machine monitoring
+Predictive maintenance
+🔹 Smart Agriculture
+Soil moisture monitoring
+Automated irrigation systems
+⚠️ Challenges of IoT
+Despite its benefits, IoT faces some challenges:
+Security: Risk of hacking
+Privacy: Personal data protection
+Data Management: Handling large volumes of data
+Network Dependency: Requires reliable internet
+🧠 Advantages of IoT
+Improved efficiency
+Automation of tasks
+Real-time monitoring
+Better decision-making
+🧩 Summary
+IoT connects physical objects to the internet
+Sensors collect data from the environment
+Software processes data and makes decisions
+Devices act automatically using actuators
+IoT is used in homes, cities, healthcare, and industries
+✍️ Exam-Oriented Questions
+Define Internet of Things (IoT).
+Explain the role of sensors in IoT.
+What is meant by automation in IoT?
+Describe the components of an IoT system.
+List any four applications of IoT.

@@ -13,6 +13,7 @@ import { AdminPanel } from './components/Admin/AdminPanel';
 import { AttendanceDashboard } from './components/Attendance/AttendanceDashboard';
 import type { UserRole } from './types';
 import defaultLogo from './assets/universitylogo.png';
+
 import { initGoogleClient, signIn, signOut, syncLectureToGoogleDoc } from './utils/googleDocs';
 import { lectureToRawText } from './utils/LectureParser';
 import { LandingPage } from './components/LandingPage/LandingPage';
@@ -301,7 +302,7 @@ function App() {
         const institutionName = prompt("Edit Institution Name", cls.institutionName || "");
         const typeInput = prompt("Edit Type: 'school' or 'university'", cls.type || "university");
         const type: 'school' | 'university' | 'other' = (typeInput === 'school' || typeInput === 'university') ? typeInput : 'other';
-        const logo = prompt("Edit Logo Path (e.g. /src/assets/schoollogo.png or https://...)", cls.logo || "");
+        const logo = prompt("Edit Logo Path (e.g. Leave blank to use default SKD logo, or paste a https://... URL)", cls.logo || "");
 
         const updatedData = courseData.map(c => c.id === cls.id ? { 
             ...c, 

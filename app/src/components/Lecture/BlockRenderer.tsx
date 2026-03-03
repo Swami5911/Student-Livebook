@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import type { ContentBlock } from '../../types';
 import '../../styles/BlockRenderer.css';
 
@@ -14,7 +15,7 @@ export const BlockRenderer: React.FC<BlockRendererProps> = ({ block }) => {
         <div className="block block-text">
           {block.title && <h3>{block.title}</h3>}
           <div className="markdown-content">
-            <ReactMarkdown>{block.content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{block.content}</ReactMarkdown>
           </div>
         </div>
       );
@@ -24,7 +25,7 @@ export const BlockRenderer: React.FC<BlockRendererProps> = ({ block }) => {
           <div className="block-label">Concept</div>
           {block.title && <h3>{block.title}</h3>}
           <div className="markdown-content">
-            <ReactMarkdown>{block.content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{block.content}</ReactMarkdown>
           </div>
         </div>
       );
@@ -34,7 +35,7 @@ export const BlockRenderer: React.FC<BlockRendererProps> = ({ block }) => {
           <div className="block-label">Example</div>
           {block.title && <h3>{block.title}</h3>}
           <div className="markdown-content">
-             <ReactMarkdown>{block.content}</ReactMarkdown>
+             <ReactMarkdown remarkPlugins={[remarkGfm]}>{block.content}</ReactMarkdown>
           </div>
         </div>
       );
@@ -44,7 +45,7 @@ export const BlockRenderer: React.FC<BlockRendererProps> = ({ block }) => {
           <div className="block-label">Teacher Note</div>
           {block.title && <h3>{block.title}</h3>}
           <div className="markdown-content">
-            <ReactMarkdown>{block.content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{block.content}</ReactMarkdown>
           </div>
         </div>
       );
@@ -65,7 +66,7 @@ export const BlockRenderer: React.FC<BlockRendererProps> = ({ block }) => {
                   <ul>
                     {block.items?.map((item, index) => (
                       <li key={index}>
-                        <ReactMarkdown>{item}</ReactMarkdown>
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{item}</ReactMarkdown>
                       </li>
                     ))}
                   </ul>
@@ -92,7 +93,7 @@ export const BlockRenderer: React.FC<BlockRendererProps> = ({ block }) => {
     default:
       return (
         <div className="block">
-          <ReactMarkdown>{block.content}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{block.content}</ReactMarkdown>
         </div>
       );
   }

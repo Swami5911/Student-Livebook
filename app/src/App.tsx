@@ -18,6 +18,7 @@ import { initGoogleClient, signIn, signOut, syncLectureToGoogleDoc } from './uti
 import { lectureToRawText } from './utils/LectureParser';
 import { LandingPage } from './components/LandingPage/LandingPage';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { AITutorButton } from './components/AITutor/AITutorButton';
 
 
 const sanitizeForFirebase = (data: any) => {
@@ -531,6 +532,20 @@ function App() {
             />
         )}
       </main>
+      )}
+
+      {/* Inject AI Tutor for all authenticated users */}
+      {authUser && (
+          <AITutorButton 
+              uid={authUser.uid}
+              contextData={{
+                  streamId: activeStream?.id,
+                  streamName: activeStream?.name,
+                  lectureId: activeLecture?.id,
+                  lectureTitle: activeLecture?.title,
+                  lecture: activeLecture // Pass full lecture object for RAG prompt
+              }}
+          />
       )}
     </div>
     </ErrorBoundary>

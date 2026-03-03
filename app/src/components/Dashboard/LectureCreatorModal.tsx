@@ -88,7 +88,7 @@ export const LectureCreatorModal: React.FC<LectureCreatorModalProps> = ({
                         value={title} 
                         onChange={e => setTitle(e.target.value)}
                         placeholder="e.g., Introduction to Cloud Computing"
-                        style={{ width: '100%', padding: '0.8rem', borderRadius: '4px', border: '1px solid #ccc' }}
+                        style={{ width: '100%', padding: '0.8rem', borderRadius: '4px', border: '1px solid #ccc', backgroundColor: '#ffffff', color: '#1f2937' }}
                     />
                 </div>
                 
@@ -100,7 +100,7 @@ export const LectureCreatorModal: React.FC<LectureCreatorModalProps> = ({
                         value={rawContent}
                         onChange={e => setRawContent(e.target.value)}
                         placeholder="Paste your lecture content here..."
-                        style={{ width: '100%', height: '300px', padding: '0.8rem', borderRadius: '4px', border: '1px solid #ccc', fontFamily: 'monospace' }}
+                        style={{ width: '100%', height: '300px', padding: '0.8rem', borderRadius: '4px', border: '1px solid #ccc', fontFamily: 'monospace', backgroundColor: '#ffffff', color: '#1f2937' }}
                     />
                 </div>
 

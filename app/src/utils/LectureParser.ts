@@ -31,7 +31,9 @@ export const parseLectureContent = (
 
     // Detect Objectives (e.g. "Objective: Understand X")
     if (trimmed.toLowerCase().startsWith('objective:')) {
-        const objective = trimmed.replace(/^objective:/i, '').trim();
+        let objective = trimmed.replace(/^objective:/i, '').trim();
+        // Clean up markdown artifacts from objectives as they are rendered outside of ReactMarkdown usually
+        objective = objective.replace(/\*\*/g, '').replace(/\*/g, '');
         objectives.push(objective);
         return;
     }
@@ -91,10 +93,18 @@ export const parseLectureContent = (
     }
 
     // Default to Text
-    // Check if we should append to previous text block to form paragraphs
     const lastBlock = currentSection.blocks![currentSection.blocks!.length - 1];
     if (lastBlock && lastBlock.type === 'text') {
-        lastBlock.content += '\n\n' + trimmed;
+        const isTableLine = trimmed.startsWith('|') || /^\s*\|/.test(line);
+        const lastBlockHasTable = lastBlock.content.includes('|--') || lastBlock.content.includes('| --');
+        const isCodeBlock = trimmed.startsWith('```');
+        
+        // If the current line is part of a table/code, OR the previous block is actively building a table
+        if (isTableLine || isCodeBlock || (lastBlockHasTable && trimmed.includes('|'))) {
+            lastBlock.content += '\n' + trimmed;
+        } else {
+            lastBlock.content += '\n\n' + trimmed;
+        }
     } else {
         currentSection.blocks!.push({
             id: generateId(),
